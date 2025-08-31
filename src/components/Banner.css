@@ -11,7 +11,7 @@
 }
 .banner-content {
   position: absolute;
-  top: 30%;
+  bottom: 10%;
   left: 40px;
   max-width: 600px;
 }
