@@ -1,0 +1,30 @@
+/* src/components/Navbar.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+.logo {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.menu li {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.menu li:hover {
+  color: gray;
+}

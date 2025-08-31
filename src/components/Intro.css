@@ -1,0 +1,58 @@
+.intro {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.netflix-logo {
+  position: relative;
+  width: 200px;   /* Adjust size */
+  height: 200px;
+}
+
+/* All bars share red color */
+.netflix-logo span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background: #e50914;
+}
+
+/* Left vertical bar */
+.netflix-logo .left {
+  left: 0;
+  width: 30%;
+}
+
+/* Right vertical bar */
+.netflix-logo .right {
+  right: 0;
+  width: 30%;
+}
+
+/* Middle diagonal bar */
+.netflix-logo .middle {
+  width: 30%;
+  left: 35%;                /* keep it between left & right */
+  background: #e50914;
+  transform: skewX(-20deg);   /* make it slant */
+  transform-origin: top left;
+  box-shadow: -20px 0 30px rgba(0, 0, 0, 0.8); /* shading effect */
+}
+
+/* Animation for dramatic reveal */
+.netflix-logo span {
+  opacity: 0;
+  animation: fadeIn 1.2s ease forwards;
+}
+
+.netflix-logo .middle { animation-delay: 0.3s; }
+.netflix-logo .right { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
