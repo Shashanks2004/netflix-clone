@@ -1,28 +1,40 @@
 /* src/components/Banner.css */
-.banner {
+.Banner {
   position: relative;
   height: 500px;
-  color: white;
+  color: rgb(0, 0, 0);
+  overflow: hidden; /* ✅ Prevents video overflow */
 }
-.banner-img {
+
+/* ✅ Fullscreen banner video */
+.Banner-video {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0; /* Video stays behind content */
 }
-.banner-content {
+
+.Banner-content {
   position: absolute;
   bottom: 10%;
   left: 40px;
   max-width: 600px;
+  z-index: 1; /* ✅ Keeps text/buttons above video */
 }
-.banner-content h1 {
+
+.Banner-content h1 {
   font-size: 50px;
   margin-bottom: 20px;
 }
-.banner-content p {
+
+.Banner-content p {
   margin-bottom: 20px;
   line-height: 1.4;
 }
+
 .btn {
   padding: 10px 20px;
   margin-right: 10px;
@@ -30,12 +42,23 @@
   border: none;
   cursor: pointer;
   border-radius: 4px;
+  transition: all 0.3s ease; /* ✅ Smooth hover effect */
 }
+
 .play {
   background: white;
   color: black;
 }
+
+.play:hover {
+  background: #e6e6e6;
+}
+
 .info {
   background: rgba(109, 109, 110, 0.7);
   color: white;
+}
+
+.info:hover {
+  background: rgba(109, 109, 110, 0.9);
 }

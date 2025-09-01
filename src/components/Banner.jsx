@@ -1,21 +1,29 @@
 // src/components/Banner.jsx
 import { useNavigate } from "react-router-dom";
 import "./Banner.css";
-import bannerImg from "../assets/banner.jpeg";
+import BannerVideo from "../assets/Banner.mp4";
 
 export default function Banner() {
   const navigate = useNavigate();
 
   return (
-    <div className="banner">
-      <img src={bannerImg} alt="banner" className="banner-img" />
+    <div className="Banner">
+      {/* ✅ Use <video> instead of <img> */}
+      <video
+        className="Banner-video"
+        src={BannerVideo}
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
 
-      <div className="banner-content">
+      <div className="Banner-content">
         <h1>Benchmate</h1>
-        <p>Who thinks about others rather than her...!</p>
+        <p>"Happy Birthday hengsee"</p>
 
         {/* Play button navigates to /video */}
-        <button className="btn play" onClick={() => navigate("/video")}>
+        <button className="btn play" onClick={() => navigate("/video/Banner")}>
           ▶ Play
         </button>
 
