@@ -1,7 +1,6 @@
 // src/components/Banner.jsx
 import { useNavigate } from "react-router-dom";
 import "./Banner.css";
-import BannerVideo from "../assets/Banner.mp4";
 
 export default function Banner() {
   const navigate = useNavigate();
@@ -11,7 +10,7 @@ export default function Banner() {
       {/* ✅ Use <video> instead of <img> */}
       <video
         className="Banner-video"
-        src={BannerVideo}
+        src="/videos/Banner.mp4"
         autoPlay
         loop
         muted
@@ -23,7 +22,7 @@ export default function Banner() {
         <p>"Happy Birthday hengsee"</p>
 
         {/* Play button navigates to /video */}
-        <button className="btn play" onClick={() => navigate("/video/Banner")}>
+        <button className="btn play" onClick={() => navigate("/video/banner")}>
           ▶ Play
         </button>
 

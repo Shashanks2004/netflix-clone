@@ -2,24 +2,17 @@
 import { useNavigate, useParams } from "react-router-dom";
 import "./VideoPage.css";
 
-// ✅ Import all videos
-import bannerVideo from "../assets/Banner.mp4";
-import donoVideo from "../assets/Dono.mp4";
-import eceVideo from "../assets/ECE.mp4";
-import cseVideo from "../assets/CSE.mp4";
-import endVideo from "../assets/End.mp4";
-
 export default function VideoPage() {
   const navigate = useNavigate();
   const { id } = useParams(); // ✅ Get dynamic id from URL
 
   // ✅ Map id → video file
   const videoMap = {
-    banner: bannerVideo,
-    dono: donoVideo,
-    ece: eceVideo,
-    cse: cseVideo,
-    end: endVideo,
+    banner: "/videos/Banner.mp4",
+    dono: "/videos/Dono.mp4",
+    ece: "/videos/ECE.mp4",
+    cse: "/videos/CSE.mp4",
+    end: "/videos/End.mp4",
   };
 
   const selectedVideo = videoMap[id] || bannerVideo;
