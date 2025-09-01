@@ -4,7 +4,7 @@ import "./VideoPage.css";
 
 // ✅ Import all videos
 import bannerVideo from "../assets/banner.mp4";
-import donoVideo from "../assets/dono.mp4";
+import donoVideo from "../assets/Dono.mp4";
 import eceVideo from "../assets/ece.mp4";
 import cseVideo from "../assets/cse.mp4";
 import endVideo from "../assets/end.mp4";
