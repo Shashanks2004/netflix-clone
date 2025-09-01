@@ -3,11 +3,11 @@ import { useNavigate, useParams } from "react-router-dom";
 import "./VideoPage.css";
 
 // ✅ Import all videos
-import bannerVideo from "../assets/banner.mp4";
+import bannerVideo from "../assets/Banner.mp4";
 import donoVideo from "../assets/Dono.mp4";
-import eceVideo from "../assets/ece.mp4";
-import cseVideo from "../assets/cse.mp4";
-import endVideo from "../assets/end.mp4";
+import eceVideo from "../assets/ECE.mp4";
+import cseVideo from "../assets/CSE.mp4";
+import endVideo from "../assets/End.mp4";
 
 export default function VideoPage() {
   const navigate = useNavigate();
